@@ -1,0 +1,32 @@
+PODS:
+  - Alamofire (4.8.0)
+  - Reveal-SDK (4)
+  - Toast-Swift (4.0.1)
+  - URLNavigator (2.1.0)
+  - WebViewJavascriptBridge (6.0.3)
+
+DEPENDENCIES:
+  - Alamofire
+  - Reveal-SDK (= 4)
+  - Toast-Swift
+  - URLNavigator
+  - WebViewJavascriptBridge
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Alamofire
+    - Reveal-SDK
+    - Toast-Swift
+    - URLNavigator
+    - WebViewJavascriptBridge
+
+SPEC CHECKSUMS:
+  Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
+  Reveal-SDK: 178c927f1a3230648d3a92b96f6e730a35b2750a
+  Toast-Swift: e42a638589a2f95036b4bb7626cfbdde7daf0393
+  URLNavigator: e8cea3835b3456d7876eb728831e742273c8d209
+  WebViewJavascriptBridge: 7f5bc4d3581e672e8f32bd0f812d54bc69bb8e29
+
+PODFILE CHECKSUM: bb3cf47c6bf6037f2f2b3dc3e03f283e8e175a07
+
+COCOAPODS: 1.5.0
