@@ -1,0 +1,591 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2701587621C0E37000CEF17D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2701587521C0E37000CEF17D /* AppDelegate.swift */; };
+		2701587821C0E37000CEF17D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2701587721C0E37000CEF17D /* ViewController.swift */; };
+		2701587B21C0E37000CEF17D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2701587921C0E37000CEF17D /* Main.storyboard */; };
+		2701587D21C0E37200CEF17D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2701587C21C0E37200CEF17D /* Assets.xcassets */; };
+		2701588021C0E37200CEF17D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2701587E21C0E37200CEF17D /* LaunchScreen.storyboard */; };
+		2701588B21C0E37200CEF17D /* GTAHybridTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2701588A21C0E37200CEF17D /* GTAHybridTests.swift */; };
+		2701589621C0E37200CEF17D /* GTAHybridUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2701589521C0E37200CEF17D /* GTAHybridUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2701588721C0E37200CEF17D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2701586A21C0E37000CEF17D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2701587121C0E37000CEF17D;
+			remoteInfo = GTAHybrid;
+		};
+		2701589221C0E37200CEF17D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2701586A21C0E37000CEF17D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2701587121C0E37000CEF17D;
+			remoteInfo = GTAHybrid;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2701587221C0E37000CEF17D /* GTAHybrid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GTAHybrid.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2701587521C0E37000CEF17D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2701587721C0E37000CEF17D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2701587A21C0E37000CEF17D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2701587C21C0E37200CEF17D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2701587F21C0E37200CEF17D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2701588121C0E37200CEF17D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2701588621C0E37200CEF17D /* GTAHybridTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GTAHybridTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2701588A21C0E37200CEF17D /* GTAHybridTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTAHybridTests.swift; sourceTree = "<group>"; };
+		2701588C21C0E37200CEF17D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2701589121C0E37200CEF17D /* GTAHybridUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GTAHybridUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2701589521C0E37200CEF17D /* GTAHybridUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTAHybridUITests.swift; sourceTree = "<group>"; };
+		2701589721C0E37200CEF17D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2701586F21C0E37000CEF17D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2701588321C0E37200CEF17D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2701588E21C0E37200CEF17D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2701586921C0E37000CEF17D = {
+			isa = PBXGroup;
+			children = (
+				2701587421C0E37000CEF17D /* GTAHybrid */,
+				2701588921C0E37200CEF17D /* GTAHybridTests */,
+				2701589421C0E37200CEF17D /* GTAHybridUITests */,
+				2701587321C0E37000CEF17D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2701587321C0E37000CEF17D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2701587221C0E37000CEF17D /* GTAHybrid.app */,
+				2701588621C0E37200CEF17D /* GTAHybridTests.xctest */,
+				2701589121C0E37200CEF17D /* GTAHybridUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2701587421C0E37000CEF17D /* GTAHybrid */ = {
+			isa = PBXGroup;
+			children = (
+				2701587521C0E37000CEF17D /* AppDelegate.swift */,
+				2701587721C0E37000CEF17D /* ViewController.swift */,
+				2701587921C0E37000CEF17D /* Main.storyboard */,
+				2701587C21C0E37200CEF17D /* Assets.xcassets */,
+				2701587E21C0E37200CEF17D /* LaunchScreen.storyboard */,
+				2701588121C0E37200CEF17D /* Info.plist */,
+			);
+			path = GTAHybrid;
+			sourceTree = "<group>";
+		};
+		2701588921C0E37200CEF17D /* GTAHybridTests */ = {
+			isa = PBXGroup;
+			children = (
+				2701588A21C0E37200CEF17D /* GTAHybridTests.swift */,
+				2701588C21C0E37200CEF17D /* Info.plist */,
+			);
+			path = GTAHybridTests;
+			sourceTree = "<group>";
+		};
+		2701589421C0E37200CEF17D /* GTAHybridUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2701589521C0E37200CEF17D /* GTAHybridUITests.swift */,
+				2701589721C0E37200CEF17D /* Info.plist */,
+			);
+			path = GTAHybridUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2701587121C0E37000CEF17D /* GTAHybrid */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2701589A21C0E37200CEF17D /* Build configuration list for PBXNativeTarget "GTAHybrid" */;
+			buildPhases = (
+				2701586E21C0E37000CEF17D /* Sources */,
+				2701586F21C0E37000CEF17D /* Frameworks */,
+				2701587021C0E37000CEF17D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GTAHybrid;
+			productName = GTAHybrid;
+			productReference = 2701587221C0E37000CEF17D /* GTAHybrid.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2701588521C0E37200CEF17D /* GTAHybridTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2701589D21C0E37200CEF17D /* Build configuration list for PBXNativeTarget "GTAHybridTests" */;
+			buildPhases = (
+				2701588221C0E37200CEF17D /* Sources */,
+				2701588321C0E37200CEF17D /* Frameworks */,
+				2701588421C0E37200CEF17D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2701588821C0E37200CEF17D /* PBXTargetDependency */,
+			);
+			name = GTAHybridTests;
+			productName = GTAHybridTests;
+			productReference = 2701588621C0E37200CEF17D /* GTAHybridTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2701589021C0E37200CEF17D /* GTAHybridUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 270158A021C0E37200CEF17D /* Build configuration list for PBXNativeTarget "GTAHybridUITests" */;
+			buildPhases = (
+				2701588D21C0E37200CEF17D /* Sources */,
+				2701588E21C0E37200CEF17D /* Frameworks */,
+				2701588F21C0E37200CEF17D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2701589321C0E37200CEF17D /* PBXTargetDependency */,
+			);
+			name = GTAHybridUITests;
+			productName = GTAHybridUITests;
+			productReference = 2701589121C0E37200CEF17D /* GTAHybridUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2701586A21C0E37000CEF17D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = goingta;
+				TargetAttributes = {
+					2701587121C0E37000CEF17D = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					2701588521C0E37200CEF17D = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = 2701587121C0E37000CEF17D;
+					};
+					2701589021C0E37200CEF17D = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = 2701587121C0E37000CEF17D;
+					};
+				};
+			};
+			buildConfigurationList = 2701586D21C0E37000CEF17D /* Build configuration list for PBXProject "GTAHybrid" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2701586921C0E37000CEF17D;
+			productRefGroup = 2701587321C0E37000CEF17D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2701587121C0E37000CEF17D /* GTAHybrid */,
+				2701588521C0E37200CEF17D /* GTAHybridTests */,
+				2701589021C0E37200CEF17D /* GTAHybridUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2701587021C0E37000CEF17D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2701588021C0E37200CEF17D /* LaunchScreen.storyboard in Resources */,
+				2701587D21C0E37200CEF17D /* Assets.xcassets in Resources */,
+				2701587B21C0E37000CEF17D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2701588421C0E37200CEF17D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2701588F21C0E37200CEF17D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2701586E21C0E37000CEF17D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2701587821C0E37000CEF17D /* ViewController.swift in Sources */,
+				2701587621C0E37000CEF17D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2701588221C0E37200CEF17D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2701588B21C0E37200CEF17D /* GTAHybridTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2701588D21C0E37200CEF17D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2701589621C0E37200CEF17D /* GTAHybridUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2701588821C0E37200CEF17D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2701587121C0E37000CEF17D /* GTAHybrid */;
+			targetProxy = 2701588721C0E37200CEF17D /* PBXContainerItemProxy */;
+		};
+		2701589321C0E37200CEF17D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2701587121C0E37000CEF17D /* GTAHybrid */;
+			targetProxy = 2701589221C0E37200CEF17D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2701587921C0E37000CEF17D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2701587A21C0E37000CEF17D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2701587E21C0E37200CEF17D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2701587F21C0E37200CEF17D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2701589821C0E37200CEF17D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2701589921C0E37200CEF17D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2701589B21C0E37200CEF17D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NHN8A752UN;
+				INFOPLIST_FILE = GTAHybrid/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.goingta.tl.GTAHybrid;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2701589C21C0E37200CEF17D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NHN8A752UN;
+				INFOPLIST_FILE = GTAHybrid/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.goingta.tl.GTAHybrid;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2701589E21C0E37200CEF17D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NHN8A752UN;
+				INFOPLIST_FILE = GTAHybridTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.goingta.tl.GTAHybridTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GTAHybrid.app/GTAHybrid";
+			};
+			name = Debug;
+		};
+		2701589F21C0E37200CEF17D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NHN8A752UN;
+				INFOPLIST_FILE = GTAHybridTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.goingta.tl.GTAHybridTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GTAHybrid.app/GTAHybrid";
+			};
+			name = Release;
+		};
+		270158A121C0E37200CEF17D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NHN8A752UN;
+				INFOPLIST_FILE = GTAHybridUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.goingta.tl.GTAHybridUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GTAHybrid;
+			};
+			name = Debug;
+		};
+		270158A221C0E37200CEF17D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NHN8A752UN;
+				INFOPLIST_FILE = GTAHybridUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.goingta.tl.GTAHybridUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GTAHybrid;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2701586D21C0E37000CEF17D /* Build configuration list for PBXProject "GTAHybrid" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2701589821C0E37200CEF17D /* Debug */,
+				2701589921C0E37200CEF17D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2701589A21C0E37200CEF17D /* Build configuration list for PBXNativeTarget "GTAHybrid" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2701589B21C0E37200CEF17D /* Debug */,
+				2701589C21C0E37200CEF17D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2701589D21C0E37200CEF17D /* Build configuration list for PBXNativeTarget "GTAHybridTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2701589E21C0E37200CEF17D /* Debug */,
+				2701589F21C0E37200CEF17D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		270158A021C0E37200CEF17D /* Build configuration list for PBXNativeTarget "GTAHybridUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				270158A121C0E37200CEF17D /* Debug */,
+				270158A221C0E37200CEF17D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2701586A21C0E37000CEF17D /* Project object */;
+}
