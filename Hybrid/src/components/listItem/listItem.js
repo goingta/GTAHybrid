@@ -1,9 +1,8 @@
 import Taro, { Component } from "@tarojs/taro";
 import { View, Text } from "@tarojs/components";
-import CSSModules from "babel-plugin-react-css-modules";
-import styles from "./listItem.styl";
+import "./listItem.styl";
 
-class ListItem extends Component {
+export default class ListItem extends Component {
   componentWillMount() {}
 
   componentDidMount() {}
@@ -31,8 +30,3 @@ class ListItem extends Component {
     );
   }
 }
-
-const result = CSSModules(Table, styles);
-console.log(result);
-
-export default result;
