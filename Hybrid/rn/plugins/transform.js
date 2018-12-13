@@ -157,10 +157,6 @@ module.exports = function(babel) {
 
     return {
         visitor: {
-            // @TODO: STYLE IMPORT
-
-            // @TODO: rewrite alert to Alert.Alert
-
             JSXOpeningElement: {
                 exit(path, state) {
                     var isIncluded = false;
@@ -217,6 +213,7 @@ module.exports = function(babel) {
                 processListAttribute(path, state);
             },
             CallExpression(path) {
+                // rewrite alert to Alert.Alert
                 if (path.node.callee.name == 'alert') {
                     hasAlert = true;
                     path.node.callee = t.memberExpression(
