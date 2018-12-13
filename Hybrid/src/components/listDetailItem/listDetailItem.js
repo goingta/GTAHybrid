@@ -21,7 +21,7 @@ export default class ListDetailItem extends Component {
     const subs = this.props.subs.map(sub => {
       return (
         <View>
-          <Text className='listDetailItem-detail'>{sub.desc}</Text>{" "}
+          <Text className='listDetailItem-detail'>{sub.desc}</Text>
           <Button
             className='listDetailItem-button'
             onclick={this.buttonClick.bind(this, sub)}

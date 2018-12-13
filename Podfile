@@ -27,6 +27,7 @@ def reactNativePods
   ]
   # 如果你的RN版本 >= 0.42.0，则加入下面这行
   pod "yoga", :path => "./Hybrid/node_modules/react-native/ReactCommon/yoga"
+  pod "Folly", :podspec => "./Hybrid/node_modules/react-native/third-party-podspecs/Folly.podspec"
 end
 
 target 'GTAHybrid' do
@@ -36,6 +37,7 @@ target 'GTAHybrid' do
   # Pods for GTAHybrid
 
   publicPods
+  reactNativePods
 
   target 'GTAHybridTests' do
     inherit! :search_paths

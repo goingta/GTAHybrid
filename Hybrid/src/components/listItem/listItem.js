@@ -1,8 +1,9 @@
 import Taro, { Component } from "@tarojs/taro";
 import { View, Text } from "@tarojs/components";
-import "./listItem.styl";
+import CSSModules from "babel-plugin-react-css-modules";
+import styles from "./listItem.styl";
 
-export default class ListItem extends Component {
+class ListItem extends Component {
   componentWillMount() {}
 
   componentDidMount() {}
@@ -20,14 +21,18 @@ export default class ListItem extends Component {
   render() {
     return (
       <View className='listItem'>
-        <a
+        <Text
           className='listItem-text'
-          href='javascript:void(0)'
           onclick={this.anchor.bind(this, this.props.key)}
         >
           {this.props.title}
-        </a>
+        </Text>
       </View>
     );
   }
 }
+
+const result = CSSModules(Table, styles);
+console.log(result);
+
+export default result;

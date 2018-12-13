@@ -50,9 +50,10 @@ export default class Index extends Component {
     return (
       <View className='container'>
         <View className='listView'>{lists}</View>
-        <View className='listDetailView'>{listDetails}</View>
       </View>
     );
+
+    // <View className='listDetailView'>{listDetails}</View>
   }
 
   constructor(props) {

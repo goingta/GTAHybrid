@@ -13,7 +13,7 @@ class WKWebViewController: UIViewController,WKScriptMessageHandler,WKUIDelegate,
     var wkWebView: WKWebView!
     
     override func viewDidLoad() {
-        self.title = "GTAHybrid"
+        self.title = "WKWebView"
         self.initUI()
     }
     
