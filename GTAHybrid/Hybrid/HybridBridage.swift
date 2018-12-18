@@ -28,14 +28,29 @@ class HybridBridage: NSObject {
             }
         }
         free(methodList)
-        callJSFunction(command, params: result.joined(separator: ","))
+        self.handleCallback(command,result.joined(separator: ","))
+    }
+    
+    @objc func getApiDoc(_ command: Command) {
+        let jsonPath = Bundle.main.path(forResource: "sdk", ofType: "json")
+        
+        if let data = NSData.init(contentsOfFile: jsonPath!) {
+            do {
+                let jsonData = try JSONSerialization.jsonObject(with: data as Data, options: .mutableContainers)
+                self.handleCallback(command, jsonData)
+            } catch let error as Error? {
+                print("读取文档出现错误!",error)
+            }
+        } else {
+            print("未读取到文档")
+        }
     }
     
     //MARK: -内部方法-
     private func callJSFunction(_ command: Command, params: String) {
         if let callback = command.callbackId {
             //执行相应JS方法
-            command.wkWebView?.evaluateJavaScript(callback+"('"+params+"')") { (any, error) in
+            command.wkWebView?.evaluateJavaScript(callback+"(\(params))") { (any, error) in
                 if (error != nil) {
                     print("\(String(describing: error))")
                 }
@@ -55,6 +70,8 @@ class HybridBridage: NSObject {
         } else {
             if let stringParams = params as? String {
                 callJSFunction(command, params: stringParams)
+            } else if let arr = params as? NSArray {
+                callJSFunction(command, params: arr.toString())
             } else {
                 if let dic = params as? NSDictionary {
                     callJSFunction(command, params: dic.toString())

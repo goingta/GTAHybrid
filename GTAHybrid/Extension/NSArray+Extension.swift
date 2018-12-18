@@ -1,5 +1,5 @@
 //
-//  Dictionary+Extension.swift
+//  NSArray+Extension.swift
 //  GTAHybrid
 //
 //  Created by goingta on 2018/12/18.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension NSDictionary {
+extension NSArray {
     /// 字典转JSON字符串
     ///
     /// - Returns: JSON字符串
