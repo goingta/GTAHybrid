@@ -23,6 +23,6 @@
 
 RCT_EXTERN_METHOD(command:(NSDictionary *)params)  //RCT_EXTERN_METHOD将方法导出到ReacNative
 
-RCT_EXTERN_METHOD(commandExtension:(NSDictionary *)params callback:(RCTResponseSenderBlock)callback)  //RCT_EXTERN_METHOD将方法导出到ReacNative
+RCT_EXTERN_METHOD(command:(NSDictionary *)params callback:(RCTResponseSenderBlock)callback)  //RCT_EXTERN_METHOD将方法导出到ReacNative
 
 @end

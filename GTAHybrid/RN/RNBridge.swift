@@ -19,7 +19,35 @@ class RNBridge: NSObject {
     /// 和业务有关的命令扩展
     ///
     /// - Parameter command: 命令对象
-    @objc public func command(_ params: [String: AnyObject]) -> Void {
-        print(params)
+    @objc public func command(_ params: NSDictionary) -> Void {
+        let result = self.execute(dic: params, callback: nil)
+        print("execute \(result)")
+    }
+    
+    /// 带回调的方法
+    ///
+    /// - Parameter command: 命令对象
+    @objc public func command(_ params: NSDictionary, callback: @escaping RCTResponseSenderBlock) -> Void {
+        let result = self.execute(dic: params, callback: callback)
+        print("execute \(result)")
+    }
+    
+    func execute(dic: NSDictionary, callback:RCTResponseSenderBlock?) -> Bool {
+        let command = Command.init(dic)
+        command.responseCallback = callback
+        var ret = true
+        guard let methodName = command.methodName else { return ret }
+        let hybridObj = HybridBridage.init()
+        let selector = NSSelectorFromString(methodName)
+        let selectorWithParams = NSSelectorFromString("\(methodName):")
+        if hybridObj.responds(to: selector) {
+            hybridObj.perform(selector)
+        } else if hybridObj.responds(to: selectorWithParams) {
+            hybridObj.perform(selectorWithParams, with: command, afterDelay: 0)
+        } else {
+            print("ERROR: Method \(String(describing: methodName)) not defined")
+            ret = false
+        }
+        return ret
     }
 }

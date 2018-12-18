@@ -31,7 +31,7 @@ export default class Index extends Component {
         value: "World"
       },
       callback: function(list) {
-        // alert(JSON.stringify(list));
+        alert(JSON.stringify(list));
       }
     });
   }
@@ -64,7 +64,7 @@ export default class Index extends Component {
     this.state = {
       menus: [
         {
-          title: "基础接口1",
+          title: "基础接口",
           key: "menu-basic",
           subs: [
             {

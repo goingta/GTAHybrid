@@ -117,7 +117,6 @@ extension WKWebViewController {
             if let dic = message.body as? NSDictionary {
                 let result = self.execute(dic: dic)
                 print("execute \(result)")
-                self.view.makeToast("message: \(message.body)")
             }
         default: break
         }

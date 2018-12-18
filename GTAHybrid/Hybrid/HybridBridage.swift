@@ -13,7 +13,14 @@ class HybridBridage: NSObject {
     var aStrig = "sss"
     
     @objc func checkJsApi(_ command: Command) {
-        print("params \(command.params)")
+        //说明是WebView执行过来的
+        if let webView = command.wkWebView {
+            webView.makeToast("message: \(String(describing: command.params))")
+        } else {
+            if let callback = command.responseCallback {
+                callback([command.params])
+            }
+        }
     }
     
     @objc func getAllApi(_ command: Command) {

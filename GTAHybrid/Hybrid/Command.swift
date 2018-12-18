@@ -15,7 +15,7 @@ class Command: NSObject {
     var callbackId: String?
     var methodName: String?
     var wkWebView: WKWebView?
-    var responseCallback: ResponseCallback?
+    var responseCallback: RCTResponseSenderBlock?
     
 //    convenience init(_ params: NSDictionary, callbackId: String, methodName: String, responseCallback: @escaping ResponseCallback) {
 //        self.init()

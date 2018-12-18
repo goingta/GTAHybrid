@@ -1,3 +1,5 @@
+import { NativeModules } from "react-native";
+
 export default {
   getCallbackId(callback) {
     let timestamp = new Date().getTime();
@@ -6,7 +8,16 @@ export default {
     return callbackId;
   },
   message(params) {
-    if (window.webkit) {
+    if (process.env.TARO_ENV == "rn") {
+      const { RNBridge } = NativeModules;
+      if (params.callback) {
+        let callback = params.callback;
+        delete params.callback;
+        RNBridge.command(params, callback);
+      } else {
+        RNBridge.command(params);
+      }
+    } else if (window.webkit) {
       try {
         if (params.callback) {
           params["callbackId"] = this.getCallbackId(params.callback);
@@ -18,7 +29,7 @@ export default {
         console.error("The native context not exist ");
       }
     } else {
-      // alert("请在移动端容器中运行");
+      alert("请在移动端容器中运行");
     }
   },
   getHybridUrl(json) {
