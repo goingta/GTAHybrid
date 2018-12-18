@@ -76,7 +76,9 @@ class HybridBridage: NSObject {
                 if let dic = params as? NSDictionary {
                     callJSFunction(command, params: dic.toString())
                 } else {
-                    assert(false, "params其他类型还暂不支持")
+//                    assert(false, "params其他类型还暂不支持")
+                    let window = UIApplication.shared.keyWindow
+                    window?.makeToast("params其他类型还暂不支持")
                 }
             }
             
