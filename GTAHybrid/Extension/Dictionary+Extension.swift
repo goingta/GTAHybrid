@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension Dictionary {
+extension NSDictionary {
     /// 字典转JSON字符串
     ///
     /// - Returns: JSON字符串

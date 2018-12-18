@@ -33,8 +33,7 @@ class RNBridge: NSObject {
     }
     
     func execute(dic: NSDictionary, callback:RCTResponseSenderBlock?) -> Bool {
-        let command = Command.init(dic)
-        command.responseCallback = callback
+        let command = Command.init(dic, webView: nil, callback: callback)
         var ret = true
         guard let methodName = command.methodName else { return ret }
         let hybridObj = HybridBridage.init()

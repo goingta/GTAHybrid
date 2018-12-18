@@ -17,14 +17,7 @@ class Command: NSObject {
     var wkWebView: WKWebView?
     var responseCallback: RCTResponseSenderBlock?
     
-//    convenience init(_ params: NSDictionary, callbackId: String, methodName: String, responseCallback: @escaping ResponseCallback) {
-//        self.init()
-//        self.params = params
-//        self.callbackId = callbackId
-//        self.methodName = methodName
-//        self.responseCallback = responseCallback
-//    }
-    convenience init(_ dic: NSDictionary) {
+    convenience init(_ dic: NSDictionary, webView: WKWebView?, callback: RCTResponseSenderBlock?) {
         self.init()
         if let params = dic["params"] as? NSDictionary {
             self.params = params
@@ -35,6 +28,7 @@ class Command: NSObject {
         if let methodName = dic["method"] as? String {
             self.methodName = methodName
         }
-//        self.responseCallback = dic["params"]
+        self.wkWebView = webView
+        self.responseCallback = callback
     }
 }

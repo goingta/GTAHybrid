@@ -9,19 +9,13 @@
 import Foundation
 
 class HybridBridage: NSObject {
-    var aInt = 3
-    var aStrig = "sss"
     
+    //MARK: -暴露给外部的方法-
     @objc func checkJsApi(_ command: Command) {
         //说明是WebView执行过来的
-        if let webView = command.wkWebView {
-            webView.makeToast("message: \(String(describing: command.params))")
-        } else {
-            if let callback = command.responseCallback {
-                callback([command.params])
-            }
-        }
+        self.handleCallback(command,command.params)
     }
+    
     
     @objc func getAllApi(_ command: Command) {
         var methodCount:UInt32 = 0
@@ -37,7 +31,8 @@ class HybridBridage: NSObject {
         callJSFunction(command, params: result.joined(separator: ","))
     }
     
-    func callJSFunction(_ command: Command, params: String) {
+    //MARK: -内部方法-
+    private func callJSFunction(_ command: Command, params: String) {
         if let callback = command.callbackId {
             //执行相应JS方法
             command.wkWebView?.evaluateJavaScript(callback+"('"+params+"')") { (any, error) in
@@ -51,6 +46,23 @@ class HybridBridage: NSObject {
                     print("\(String(describing: error))")
                 }
             }
+        }
+    }
+    
+    private func handleCallback(_ command: Command,_ params: Any) {
+        if let callback = command.responseCallback {
+            callback([params])
+        } else {
+            if let stringParams = params as? String {
+                callJSFunction(command, params: stringParams)
+            } else {
+                if let dic = params as? NSDictionary {
+                    callJSFunction(command, params: dic.toString())
+                } else {
+                    assert(false, "params其他类型还暂不支持")
+                }
+            }
+            
         }
     }
 }

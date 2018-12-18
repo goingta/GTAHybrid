@@ -47,25 +47,8 @@ class WKWebViewController: UIViewController,WKScriptMessageHandler,WKUIDelegate,
         return "HybridBridage"
     }
     
-    @objc func getApiList(cls: AnyClass) -> Array<String> {
-        var methodCount:UInt32 = 0
-         var result = [String]()
-        guard let methodList = class_copyMethodList(cls, &methodCount) else {
-            return result
-        }
-        //打印方法
-        for i in 0..<Int(methodCount) {
-            if let method = methodList[i] as? Method {
-                result.append(String(_sel:method_getName(method)))
-            }
-        }
-        free(methodList)
-        return result
-    }
-    
     func execute(dic: NSDictionary) -> Bool {
-        let command = Command.init(dic)
-        command.wkWebView = wkWebView
+        let command = Command.init(dic, webView: wkWebView, callback: nil)
         var ret = true
         guard let hybridClass:NSObject.Type = self.swiftClassFromString(className: self.apiClassName()) as? NSObject.Type else { return ret}
         guard let methodName = command.methodName else { return ret }
