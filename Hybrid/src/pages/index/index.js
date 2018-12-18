@@ -1,59 +1,62 @@
 import Taro, { Component } from "@tarojs/taro";
-import { View, Text } from "@tarojs/components";
+import { View, ScrollView } from "@doctorwork/components";
 import ListItem from "../../components/listItem/listItem";
 import ListDetailItem from "../../components/listDetailItem/listDetailItem";
+import HybridBridage from "../../utils/GTAHybridBridge";
 import "./index.styl";
 
 export default class Index extends Component {
-  config = {
-    navigationBarTitleText: "首页"
-  };
-
   componentWillMount() {}
 
   componentDidMount() {}
 
   componentWillUnmount() {}
 
-  componentDidShow() {}
+  componentDidShow() {
+    HybridBridage.message({
+      method: "getAllApi",
+      callback: function(list) {
+        // alert(JSON.stringify(list));
+      }
+    });
+  }
 
   componentDidHide() {}
 
   buttonClick(msg) {
-    try {
-      webkit.messageHandlers.hybridHandle.postMessage({
-        action: msg.function,
-        params: {
-          key: "Hello",
-          value: "World"
-        }
-      });
-    } catch (error) {
-      console.error("The native context not exist ");
-    }
+    HybridBridage.message({
+      method: msg.function,
+      params: {
+        key: "Hello",
+        value: "World"
+      },
+      callback: function(list) {
+        // alert(JSON.stringify(list));
+      }
+    });
   }
 
   render() {
-    const lists = this.state.menus.map(menu => {
-      return <ListItem {...menu} id={menu.key} />;
+    const lists = this.state.menus.map((menu, index) => {
+      return <ListItem {...menu} id={menu.key} key={index} />;
     });
-    const listDetails = this.state.menus.map(menu => {
+    const listDetails = this.state.menus.map((menu, index) => {
       return (
         <ListDetailItem
           {...menu}
           id={menu.key}
+          key={index}
           onButtonClick={msg => this.buttonClick(msg)}
         />
       );
     });
-    console.log(lists);
-    return (
-      <View className='container'>
-        <View className='listView'>{lists}</View>
-      </View>
-    );
 
-    // <View className='listDetailView'>{listDetails}</View>
+    return (
+      <ScrollView className='container'>
+        <View className='listView'>{lists}</View>
+        <View className='listDetailView'>{listDetails}</View>
+      </ScrollView>
+    );
   }
 
   constructor(props) {
@@ -61,12 +64,16 @@ export default class Index extends Component {
     this.state = {
       menus: [
         {
-          title: "基础接口",
+          title: "基础接口1",
           key: "menu-basic",
           subs: [
             {
               desc: "判断当前客户端是否支持指定JS接口",
               function: "checkJsApi"
+            },
+            {
+              desc: "获取所有支持的API",
+              function: "getAllApi"
             }
           ]
         },

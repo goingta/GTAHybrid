@@ -8,10 +8,11 @@
 
 import UIKit
 import WebKit
+import Toast_Swift
 
 class WKWebViewController: UIViewController,WKScriptMessageHandler,WKUIDelegate,WKNavigationDelegate {
     var wkWebView: WKWebView!
-    
+
     override func viewDidLoad() {
         self.title = "WKWebView"
         self.initUI()
@@ -29,11 +30,57 @@ class WKWebViewController: UIViewController,WKScriptMessageHandler,WKUIDelegate,
         self.view.addSubview(wkWebView)
         
         let item = UIBarButtonItem(title: "刷新", style: .plain, target: self, action: #selector(refresh))
-        self.navigationItem.rightBarButtonItem = item
+        self.tabBarController?.navigationItem.rightBarButtonItem = item
+//        self.navigationItem.rightBarButtonItem = item
     }
     
     @objc func refresh() {
         wkWebView.reload()
+    }
+    
+    func swiftClassFromString(className: String) -> AnyObject.Type? {
+        let clsName = Bundle.main.infoDictionary!["CFBundleName"] as! String + "." + className
+        return NSClassFromString(clsName)
+    }
+    
+    func apiClassName() -> String {
+        return "HybridBridage"
+    }
+    
+    @objc func getApiList(cls: AnyClass) -> Array<String> {
+        var methodCount:UInt32 = 0
+         var result = [String]()
+        guard let methodList = class_copyMethodList(cls, &methodCount) else {
+            return result
+        }
+        //打印方法
+        for i in 0..<Int(methodCount) {
+            if let method = methodList[i] as? Method {
+                result.append(String(_sel:method_getName(method)))
+            }
+        }
+        free(methodList)
+        return result
+    }
+    
+    func execute(dic: NSDictionary) -> Bool {
+        let command = Command.init(dic)
+        command.wkWebView = wkWebView
+        var ret = true
+        guard let hybridClass:NSObject.Type = self.swiftClassFromString(className: self.apiClassName()) as? NSObject.Type else { return ret}
+        guard let methodName = command.methodName else { return ret }
+        let hybridObj = hybridClass.init()
+        let selector = NSSelectorFromString(methodName)
+        let selectorWithParams = NSSelectorFromString("\(methodName):")
+        if hybridObj.responds(to: selector) {
+            hybridObj.perform(selector)
+        } else if hybridObj.responds(to: selectorWithParams) {
+            hybridObj.perform(selectorWithParams, with: command, afterDelay: 0)
+        } else {
+            print("ERROR: Method \(String(describing: methodName)) not defined")
+            ret = false
+        }
+        return ret
     }
 }
 
@@ -51,9 +98,10 @@ extension WKWebViewController {
     
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
         let url = navigationAction.request.url
-        if url?.scheme == "gtahybrid" {
-            if let action: String = url?.host {
-                print("action: \(action)")
+        if url?.scheme == "gtahybrid", let host = url?.host {
+            if host == "action",let dic = url?.query?.urlParametersToDic {
+                let result = self.execute(dic: dic)
+                print("execute \(result)")
                 decisionHandler(.cancel)
                 return
             }
@@ -67,14 +115,9 @@ extension WKWebViewController {
         case "hybridHandle":
             //多个参数
             if let dic = message.body as? NSDictionary {
-                let action: String = (dic["action"] as AnyObject).description
-                print("action: \(action)")
-                
-                if let params: NSDictionary = (dic["params"] as? NSDictionary) {
-                    print("params: \(params)")
-                } else if let params: String = (dic["params"] as AnyObject).description {
-                    print("params: \(params)")
-                }
+                let result = self.execute(dic: dic)
+                print("execute \(result)")
+                self.view.makeToast("message: \(message.body)")
             }
         default: break
         }

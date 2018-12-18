@@ -2,10 +2,10 @@
 # platform :ios, '9.0'
 
 def publicPods
-  pod 'WebViewJavascriptBridge'
   pod "Toast-Swift"
   pod "Alamofire"
   pod "URLNavigator"
+  pod "SnapKit"
 
   #MARK: -- 测试使用
   pod "Reveal-SDK","4", :configurations => ["Debug"]

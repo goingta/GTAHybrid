@@ -7,8 +7,10 @@
 //
 
 import Foundation
+import SnapKit
 
 class RNViewController: UIViewController {
+    @IBOutlet weak var RNContentView: UIView!
     //MARK: -属性-
     let eventEmitter = GTAEventEmitter()
     var moduleName: String?
@@ -25,7 +27,6 @@ class RNViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -53,15 +54,25 @@ class RNViewController: UIViewController {
         #endif
         //        eventEmitter.bridge = RCTBridge(bundleURL: jsCodeLocation, moduleProvider: nil, launchOptions: nil)
         //        bridge = RCTBridge(bundleURL: jsCodeLocation, moduleProvider: nil, launchOptions: nil)
-        if let module = moduleName {
-            let rootView = RCTRootView(
-                bundleURL: jsCodeLocation,
-                moduleName: module,//这里的名字要和index.js中相同
-                initialProperties: nil,
-                launchOptions: nil
-            )
-            eventEmitter.bridge = rootView?.bridge
-            view = rootView
+        if let module = moduleName,let rootView = RCTRootView(
+            bundleURL: jsCodeLocation,
+            moduleName: module,//这里的名字要和index.js中相同
+            initialProperties: nil,
+            launchOptions: nil
+            ) {
+            
+            eventEmitter.bridge = rootView.bridge
+            view.addSubview(rootView)
+            rootView.snp.makeConstraints { (make) -> Void in
+                make.width.equalTo(view)
+                if #available(iOS 11.0, *) {
+                    make.top.equalTo(view.safeAreaLayoutGuide.snp.topMargin)
+                    make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottomMargin)
+                } else {
+                    make.top.equalTo(view)
+                    make.bottom.equalTo(view)
+                }
+            }
         } else {
             assert(moduleName != nil,"请输入RN的moduleName")
         }

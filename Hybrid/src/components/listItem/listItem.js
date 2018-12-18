@@ -1,5 +1,5 @@
 import Taro, { Component } from "@tarojs/taro";
-import { View, Text } from "@tarojs/components";
+import { View, Text } from "@doctorwork/components";
 import "./listItem.styl";
 
 export default class ListItem extends Component {
@@ -14,7 +14,10 @@ export default class ListItem extends Component {
   componentDidHide() {}
 
   anchor(name) {
-    document.getElementById(name).scrollIntoView();
+    if (process.env.TARO_ENV == "h5") {
+      document.getElementById(name).scrollIntoView();
+    } else {
+    }
   }
 
   render() {
@@ -22,7 +25,7 @@ export default class ListItem extends Component {
       <View className='listItem'>
         <Text
           className='listItem-text'
-          onclick={this.anchor.bind(this, this.props.key)}
+          onClick={this.anchor.bind(this, this.props.key)}
         >
           {this.props.title}
         </Text>

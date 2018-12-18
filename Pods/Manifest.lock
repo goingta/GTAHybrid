@@ -43,6 +43,7 @@ PODS:
     - React/fishhook
     - React/RCTBlob
   - Reveal-SDK (4)
+  - SnapKit (4.2.0)
   - Toast-Swift (4.0.1)
   - URLNavigator (2.1.0)
   - WebViewJavascriptBridge (6.0.3)
@@ -60,6 +61,7 @@ DEPENDENCIES:
   - React/RCTText (from `./Hybrid/node_modules/react-native`)
   - React/RCTWebSocket (from `./Hybrid/node_modules/react-native`)
   - Reveal-SDK (= 4)
+  - SnapKit
   - Toast-Swift
   - URLNavigator
   - WebViewJavascriptBridge
@@ -72,6 +74,7 @@ SPEC REPOS:
     - DoubleConversion
     - glog
     - Reveal-SDK
+    - SnapKit
     - Toast-Swift
     - URLNavigator
     - WebViewJavascriptBridge
@@ -92,11 +95,12 @@ SPEC CHECKSUMS:
   glog: 1de0bb937dccdc981596d3b5825ebfb765017ded
   React: 1fe0eb13d90b625d94c3b117c274dcfd2e760e11
   Reveal-SDK: 178c927f1a3230648d3a92b96f6e730a35b2750a
+  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
   Toast-Swift: e42a638589a2f95036b4bb7626cfbdde7daf0393
   URLNavigator: e8cea3835b3456d7876eb728831e742273c8d209
   WebViewJavascriptBridge: 7f5bc4d3581e672e8f32bd0f812d54bc69bb8e29
   yoga: b1ce48b6cf950b98deae82838f5173ea7cf89e85
 
-PODFILE CHECKSUM: 7dd281857d4e7a2af4bcf7e9da57debb1b118e5d
+PODFILE CHECKSUM: 0055dada45629d4586fa2cbbd3f9aef6dde233f4
 
 COCOAPODS: 1.5.0

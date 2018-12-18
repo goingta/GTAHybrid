@@ -55,7 +55,6 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="WKWebView" id="YPq-PO-jXh"/>
-                    <navigationItem key="navigationItem" id="e5J-sR-Ea2"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -68,10 +67,25 @@
                     <view key="view" contentMode="scaleToFill" id="pgO-OM-wbc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9yV-qc-spq">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="9yV-qc-spq" firstAttribute="top" secondItem="qJ1-3g-iA0" secondAttribute="top" id="6Hl-Q6-jGJ"/>
+                            <constraint firstItem="9yV-qc-spq" firstAttribute="trailing" secondItem="qJ1-3g-iA0" secondAttribute="trailing" id="LiB-mN-kf7"/>
+                            <constraint firstItem="9yV-qc-spq" firstAttribute="bottom" secondItem="qJ1-3g-iA0" secondAttribute="bottom" id="dmx-Zx-wDm"/>
+                            <constraint firstItem="9yV-qc-spq" firstAttribute="leading" secondItem="qJ1-3g-iA0" secondAttribute="leading" id="nlq-Jl-33p"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="qJ1-3g-iA0"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="ReactNative" id="Rnn-NO-IlH"/>
+                    <connections>
+                        <outlet property="RNContentView" destination="9yV-qc-spq" id="5HF-CA-6Z7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C6k-zt-19m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

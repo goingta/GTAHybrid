@@ -17,4 +17,25 @@ setJSExceptionHandler((e, isFatal) => {
   }
 }, true);
 
+class TestHome extends Component {
+  componentDidMount() {}
+
+  componentDidShow() {}
+
+  componentDidHide() {}
+
+  componentDidCatchError() {}
+
+  // 在 App 类中的 render() 函数没有实际作用
+  // 请勿修改此函数
+  render() {
+    return (
+      <View>
+        <Text>lkfdjslaf</Text>
+      </View>
+    );
+  }
+}
+
+// AppRegistry.registerComponent("Home", () => TestHome);
 AppRegistry.registerComponent("Home", () => App);

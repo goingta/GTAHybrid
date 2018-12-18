@@ -18,6 +18,8 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "@doctorwork/components": "^1.0.5",
+    "@doctorwork/components-rn": "^1.0.2",
     "@tarojs/components": "^1.1.1",
     "@tarojs/rn-runner": "^1.2.0-beta.14",
     "@tarojs/router": "^1.1.1",

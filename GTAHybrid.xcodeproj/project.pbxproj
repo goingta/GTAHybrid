@@ -19,6 +19,12 @@
 		27043EC221C13D1A00A04E85 /* GTAEventEmitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27043EC121C13D1A00A04E85 /* GTAEventEmitter.swift */; };
 		27043EC521C13D6D00A04E85 /* GTAEventEmitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 27043EC421C13D6D00A04E85 /* GTAEventEmitter.m */; };
 		27043EC821C1F8DB00A04E85 /* UIDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27043EC721C1F8DB00A04E85 /* UIDevice+Extension.swift */; };
+		27C8F5F921C387710073A0CD /* RNBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C8F5F821C387710073A0CD /* RNBridge.swift */; };
+		27C8F5FB21C3877F0073A0CD /* RNBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C8F5FA21C3877F0073A0CD /* RNBridge.m */; };
+		27C8F5FF21C7833B0073A0CD /* HybridBridage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C8F5FE21C7833B0073A0CD /* HybridBridage.swift */; };
+		27C8F60121C7963B0073A0CD /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C8F60021C7963B0073A0CD /* Command.swift */; };
+		27C8F60321C8903C0073A0CD /* Dictionary+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C8F60221C8903C0073A0CD /* Dictionary+Extension.swift */; };
+		27C8F60521C8A3220073A0CD /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C8F60421C8A3220073A0CD /* String+Extension.swift */; };
 		92D7874F6196B0280702DDFA /* Pods_GTAHybrid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92363BE9AB315CDE43E6CCA3 /* Pods_GTAHybrid.framework */; };
 		CCD0EE0B0ECCBF00588525D1 /* Pods_GTAHybridUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29D6D353B39E866B2388F50C /* Pods_GTAHybridUITests.framework */; };
 		EB8566EC74C5F83DE2D56FF8 /* Pods_GTAHybridTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E63918AAF0533AD099159A41 /* Pods_GTAHybridTests.framework */; };
@@ -61,6 +67,12 @@
 		27043EC321C13D6D00A04E85 /* GTAHybrid-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GTAHybrid-Bridging-Header.h"; sourceTree = "<group>"; };
 		27043EC421C13D6D00A04E85 /* GTAEventEmitter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTAEventEmitter.m; sourceTree = "<group>"; };
 		27043EC721C1F8DB00A04E85 /* UIDevice+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extension.swift"; sourceTree = "<group>"; };
+		27C8F5F821C387710073A0CD /* RNBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNBridge.swift; sourceTree = "<group>"; };
+		27C8F5FA21C3877F0073A0CD /* RNBridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNBridge.m; sourceTree = "<group>"; };
+		27C8F5FE21C7833B0073A0CD /* HybridBridage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HybridBridage.swift; sourceTree = "<group>"; };
+		27C8F60021C7963B0073A0CD /* Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
+		27C8F60221C8903C0073A0CD /* Dictionary+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extension.swift"; sourceTree = "<group>"; };
+		27C8F60421C8A3220073A0CD /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		29D6D353B39E866B2388F50C /* Pods_GTAHybridUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GTAHybridUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EF3D9B57548C6D517995166 /* Pods-GTAHybridUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GTAHybridUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GTAHybridUITests/Pods-GTAHybridUITests.release.xcconfig"; sourceTree = "<group>"; };
 		43BFF783DFDD0376CB2CE526 /* Pods-GTAHybridTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GTAHybridTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GTAHybridTests/Pods-GTAHybridTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -125,6 +137,7 @@
 		2701587421C0E37000CEF17D /* GTAHybrid */ = {
 			isa = PBXGroup;
 			children = (
+				27C8F5FD21C7831A0073A0CD /* Hybrid */,
 				27043EC621C1F8B600A04E85 /* Extension */,
 				270158A921C0ED7900CEF17D /* Business */,
 				270158A421C0ED4000CEF17D /* WebView */,
@@ -164,6 +177,8 @@
 				270158A721C0ED6A00CEF17D /* RNViewController.swift */,
 				27043EC121C13D1A00A04E85 /* GTAEventEmitter.swift */,
 				27043EC421C13D6D00A04E85 /* GTAEventEmitter.m */,
+				27C8F5F821C387710073A0CD /* RNBridge.swift */,
+				27C8F5FA21C3877F0073A0CD /* RNBridge.m */,
 			);
 			path = RN;
 			sourceTree = "<group>";
@@ -187,8 +202,19 @@
 			isa = PBXGroup;
 			children = (
 				27043EC721C1F8DB00A04E85 /* UIDevice+Extension.swift */,
+				27C8F60221C8903C0073A0CD /* Dictionary+Extension.swift */,
+				27C8F60421C8A3220073A0CD /* String+Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		27C8F5FD21C7831A0073A0CD /* Hybrid */ = {
+			isa = PBXGroup;
+			children = (
+				27C8F5FE21C7833B0073A0CD /* HybridBridage.swift */,
+				27C8F60021C7963B0073A0CD /* Command.swift */,
+			);
+			path = Hybrid;
 			sourceTree = "<group>";
 		};
 		5C8D123A1E146A050018E067 /* Frameworks */ = {
@@ -358,6 +384,7 @@
 				"${BUILT_PRODUCTS_DIR}/Folly/folly.framework",
 				"${BUILT_PRODUCTS_DIR}/React/React.framework",
 				"${PODS_ROOT}/Reveal-SDK/RevealServer-4/iOS/RevealServer.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
 				"${BUILT_PRODUCTS_DIR}/URLNavigator/URLNavigator.framework",
 				"${BUILT_PRODUCTS_DIR}/WebViewJavascriptBridge/WebViewJavascriptBridge.framework",
@@ -371,6 +398,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/folly.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/React.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RevealServer.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/URLNavigator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WebViewJavascriptBridge.framework",
@@ -449,7 +477,13 @@
 				270158A621C0ED5800CEF17D /* WKWebViewController.swift in Sources */,
 				2701587821C0E37000CEF17D /* ViewController.swift in Sources */,
 				27043EC521C13D6D00A04E85 /* GTAEventEmitter.m in Sources */,
+				27C8F60521C8A3220073A0CD /* String+Extension.swift in Sources */,
+				27C8F5FB21C3877F0073A0CD /* RNBridge.m in Sources */,
+				27C8F5F921C387710073A0CD /* RNBridge.swift in Sources */,
+				27C8F5FF21C7833B0073A0CD /* HybridBridage.swift in Sources */,
+				27C8F60121C7963B0073A0CD /* Command.swift in Sources */,
 				2701587621C0E37000CEF17D /* AppDelegate.swift in Sources */,
+				27C8F60321C8903C0073A0CD /* Dictionary+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
