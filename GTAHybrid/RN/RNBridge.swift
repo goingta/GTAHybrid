@@ -45,6 +45,8 @@ class RNBridge: NSObject {
             hybridObj.perform(selectorWithParams, with: command, afterDelay: 0)
         } else {
             print("ERROR: Method \(String(describing: methodName)) not defined")
+            let window = UIApplication.shared.keyWindow
+            window?.makeToast("ERROR: Method \(String(describing: methodName)) not defined")
             ret = false
         }
         return ret
